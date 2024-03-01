@@ -1,0 +1,32 @@
+Started GET "/admin" for ::1 at 2024-03-01 22:59:21 +0530
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms | Allocations: 1820)
+
+
+Started GET "/admin/login" for ::1 at 2024-03-01 22:59:21 +0530
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering layout /usr/local/rvm/gems/ruby-2.5.1/gems/activeadmin-2.9.0/app/views/layouts/active_admin_logged_out.html.erb
+  Rendering /usr/local/rvm/gems/ruby-2.5.1/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/rvm/gems/ruby-2.5.1/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (Duration: 0.7ms | Allocations: 664)
+  Rendered /usr/local/rvm/gems/ruby-2.5.1/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 9.4ms | Allocations: 11955)
+  Rendered layout /usr/local/rvm/gems/ruby-2.5.1/gems/activeadmin-2.9.0/app/views/layouts/active_admin_logged_out.html.erb (Duration: 648.9ms | Allocations: 395330)
+Completed 200 OK in 662ms (Views: 653.5ms | ActiveRecord: 2.4ms | Allocations: 404409)
+
+
+Started POST "/admin/login" for ::1 at 2024-03-01 22:59:24 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (2.2ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`email` = 'admin@example.com' ORDER BY `admin_users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed 303 See Other in 222ms (ActiveRecord: 2.2ms | Allocations: 7395)
+
+
+Started GET "/admin" for ::1 at 2024-03-01 22:59:24 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 1 ORDER BY `admin_users`.`id` ASC LIMIT 1[0m
+  Rendering /usr/local/rvm/gems/ruby-2.5.1/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /usr/local/rvm/gems/ruby-2.5.1/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (Duration: 12.5ms | Allocations: 24142)
+Completed 200 OK in 18ms (Views: 13.4ms | ActiveRecord: 0.8ms | Allocations: 26987)
+
+
