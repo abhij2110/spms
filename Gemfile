@@ -33,6 +33,7 @@ gem 'active_admin_flat_skin'
 gem 'font-awesome-rails'
 gem 'paperclip'
 gem 'aws-sdk-s3', '~> 1'
+# gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -49,6 +50,13 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rvm'
+  gem 'capistrano3-delayed-job', '~> 1.0'
+  gem 'capistrano-sidekiq'
+  gem 'capistrano3-puma'
 end
 
 group :test do
