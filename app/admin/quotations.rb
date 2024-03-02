@@ -15,6 +15,15 @@ ActiveAdmin.register Quotation do
       f.actions
     end
 
+    index do
+      selectable_column
+      id_column
+      column :quotation_name
+      column :status
+      column :customer
+      actions
+    end
+
     filter :customer
     filter :created_at
 
