@@ -13,7 +13,7 @@ ActiveAdmin.register Customer do
     column "Download Latest Quotation" do |resource|
       quote = resource.quotations.last
       if quote.present?
-        link_to "Quoation_#{quote.id}", download_file_admin_customer_path(resource.id), target: :_blank
+        link_to "Quotation_#{quote.id}", download_file_admin_customer_path(resource.id), target: :_blank
       end
     end
     actions
