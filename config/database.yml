@@ -27,4 +27,4 @@ production:
   username: root
   password: KTz6sLODwYdKR3U9ZP6T1q8a2pH5OUmm
   database: spms_staging
-  socket: /var/run/postgresql/.s.PGSQL.5432
+  # socket: /var/run/postgresql/.s.PGSQL.5432
