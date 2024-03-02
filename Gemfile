@@ -33,8 +33,9 @@ gem 'active_admin_flat_skin'
 gem 'font-awesome-rails'
 gem 'paperclip'
 gem 'aws-sdk-s3', '~> 1'
-# gem 'figaro'
-
+gem 'figaro'
+gem 'ed25519'
+gem 'bcrypt_pbkdf'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
