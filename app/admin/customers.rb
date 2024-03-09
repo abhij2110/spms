@@ -21,9 +21,8 @@ ActiveAdmin.register Customer do
 
   member_action :download_file, :method => :get do
     customer = Customer.find(params[:id])
-    quotations = customer.quotations
-    if quotations.present?
-      quotations.each do |quote|
+    quote = customer.quotations.last
+    if quote.present?
         file_name = "#{quote.quotation_name}.pdf"
         url = quote.document.expiring_url
         data  = open(url)
@@ -33,7 +32,6 @@ ActiveAdmin.register Customer do
           type: quote.document_content_type,
           disposition: params[:inline] || "attachment",
         )
-      end
     end
   end
 
